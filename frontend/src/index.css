@@ -1,0 +1,25 @@
+/* main css entry (e.g. src/index.css or app.css) */
+@import "tailwindcss";
+
+/* Load DaisyUI plugin */
+@plugin "daisyui";
+
+/* Define which themes are available */
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+}
+@plugin "daisyui/theme" {
+  name: "dark";
+  prefersdark: true;
+}
+
+/* Optionally, if you had a theme list directive (older style) you might also include: */
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, "cupcake","bumblebee","emerald","corporate",
+    "synthwave","retro","cyberpunk","valentine","halloween",
+    "garden","forest","aqua","lofi","pastel","fantasy",
+    "wireframe","black","luxury","dracula","cmyk","autumn",
+    "business","acid","lemonade","night","coffee","winter",
+    "dim","nord","sunset";
+}
