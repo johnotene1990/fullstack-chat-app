@@ -15,9 +15,9 @@ const _dirname = path.resolve();
 
 app.use(cookieParser());
 
-const CLIENT_URL = process.env.CLIENT_URL || "*"; // * for monorepo serving frontend
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173"; // * for monorepo serving frontend
 app.use(cors({
- origin: process.env.CLIENT_URL,
+ origin: CLIENT_URL,
   credentials: true,
 }));
 
