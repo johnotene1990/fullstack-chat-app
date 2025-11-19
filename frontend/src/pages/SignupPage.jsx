@@ -20,7 +20,7 @@ const SignupPage = () => {
     if (!formData.email.trim()) return toast.error("Email is required");
     //if (!/\$+@\$+\.\$+/.test(formData.email)) return toast.error("Invalid email format");
     if (!formData.password) return toast.error("password is required");
-    if (!formData.password, length < 6) return toast.error("password must be at least 6 characters");
+    //if (!formData.password, length < 6) return toast.error("password must be at least 6 characters");
 
     return true;
   };
@@ -119,7 +119,7 @@ const SignupPage = () => {
             <button 
             type='submit'
             className='btn btn-primary w-full' disabled={isSigningUp}>
-            {isSignUp ? (
+            {isSigningUp ? (
               <>
               <Loader2 className='size-5 animate-spin' />
               Loading.....
